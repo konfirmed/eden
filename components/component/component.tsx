@@ -4,35 +4,35 @@
  */
 import { Button } from "@/components/ui/button"
 import { CardContent, Card } from "@/components/ui/card"
+import Link from 'next/link';
 
 export function Component() {
   return (
     <div key="1" className="bg-white">
-      <nav className="bg-gray-200 py-4">
-        <div className="container mx-auto flex justify-between items-center px-6">
-          <div className="flex items-center space-x-4">
-            <a className="text-xl font-semibold text-gray-800" href="#">
-              Eden
-            </a>
-            <div className="hidden md:flex space-x-2">
-              <a className="text-gray-600 hover:text-gray-800" href="#">
-                Home
-              </a>
-              <a className="text-gray-600 hover:text-gray-800" href="#">
-                About Us
-              </a>
-              <a className="text-gray-600 hover:text-gray-800" href="#">
-                Gallery
-              </a>
-            </div>
-          </div>
-          <Button className="bg-blue-600 text-white">Contact Us</Button>
-        </div>
-      </nav>
+      <nav className="bg-white py-4 shadow-md sticky top-0 z-10">
+  <div className="container mx-auto px-4 flex justify-between items-center">
+    {/* Replace 'Eden' with the Eden logo */}
+    <img src="/eden.jpg" alt="Eden Logo" className="h-8" />
+
+    <div className="flex items-center space-x-4">
+      <Link className="text-gray-600 hover:text-gray-800" href="#">
+        Home
+      </Link>
+      <Link className="text-gray-600 hover:text-gray-800" href="#">
+        About Us
+      </Link>
+      <Link className="text-gray-600 hover:text-gray-800" href="#">
+        Gallery
+      </Link>
+      <Button className="bg-blue-500 hover:bg-blue-700 text-white">Contact Us</Button>
+    </div>
+  </div>
+</nav>
+
       <header
         className="bg-cover bg-center h-[600px] text-white"
         style={{
-          backgroundImage: "\"url('/placeholder.svg')\"",
+          backgroundImage: "url('/placeholder.svg')",
         }}
       >
         <div className="container mx-auto px-6 py-24">
@@ -71,13 +71,60 @@ export function Component() {
           </Card>
         </div>
       </section>
+
+      <section className="w-full py-6 md:py-12 bg-gray-300">
+      <div className="container flex flex-col items-center gap-4 px-4 text-center md:grid md:px-6 md:gap-10 lg:grid-cols-2 lg:justify-between xl:gap-16">
+        <img
+          alt="Image"
+          className="aspect-video overflow-hidden rounded-xl object-cover object-center"
+          height="338"
+          src="/placeholder.svg"
+          width="600"
+        />
+        <div className="flex flex-col justify-center space-y-4">
+          <p className="text-sm font-semibold tracking-wide uppercase text-gray-500 dark:text-gray-400">
+            Trusted by developers
+          </p>
+          <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+            The definitive guide to modern web development. The platform for rapid progress. Let your team focus on
+            shipping features instead of managing infrastructure with automated CI/CD, built-in testing, and integrated
+            collaboration.
+          </p>
+        </div>
+      </div>
+    </section>
+
+      <section className="container mx-auto px-6 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <Card className="w-full">
+            <CardContent>
+              <h3 className="text-2xl font-bold mb-4"> Empowerment </h3>
+              <p className="mb-4">
+                Enriching lives is at the core of our mission. We strive to make a positive impact by providing
+                essential support and resources to those in need, fostering growth and empowerment in communities
+                worldwide.
+              </p>
+              <p className="mb-4">Join us in our journey to create a brighter future for all.</p>
+              <Button className="bg-red-600">Donate Now</Button>
+            </CardContent>
+          </Card>
+          <img
+            alt="Enriching Lives Image"
+            className="aspect-[3/2] object-cover rounded-lg"
+            height={400}
+            src="/placeholder.svg"
+            width={600}
+          />
+        </div>
+      </section>
       <section className="bg-orange-500 text-white py-12">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-6">Help Today Because Tomorrow you may be Needs someone help</h2>
           <Button className="bg-transparent border border-white">Watch Video</Button>
         </div>
       </section>
-      <section className="container mx-auto px-6 py-12">
+      {/* <section className="container mx-auto px-6 py-12">
         <h2 className="text-3xl font-bold text-center mb-12">Our Goal</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <Card className="w-full">
@@ -134,7 +181,8 @@ export function Component() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }
+
