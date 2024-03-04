@@ -5,23 +5,28 @@
 import { Button } from "@/components/ui/button"
 import { CardContent, Card } from "@/components/ui/card"
 import Link from 'next/link';
+import Image from 'next/image';
 
 export function Component() {
   return (
+    <>
     <div key="1" className="bg-white">
       <nav className="bg-white py-4 shadow-md sticky top-0 z-10">
-  <div className="container mx-auto px-4 flex justify-between items-center">
-    {/* Replace 'Eden' with the Eden logo */}
-    <img src="/eden.jpg" alt="Eden Logo" className="h-8" />
-
-    <div className="flex items-center space-x-4">
-      <Link className="text-gray-600 hover:text-gray-800" href="#">
+        <div className="container mx-auto px-4 flex justify-between items-center">
+          {/* Replace 'Eden' with the Eden logo */}
+          <Image src="/eden.jpg" 
+          alt="Eden Logo" 
+          className="h-8" 
+          width={50} 
+          height={50} />
+          <div className="flex items-center space-x-4">
+      <Link className="text-gray-600 hover:text-gray-800" href="/">
         Home
       </Link>
-      <Link className="text-gray-600 hover:text-gray-800" href="#">
+      <Link className="text-gray-600 hover:text-gray-800" href="/about">
         About Us
       </Link>
-      <Link className="text-gray-600 hover:text-gray-800" href="#">
+      <Link className="text-gray-600 hover:text-gray-800" href="/gallery">
         Gallery
       </Link>
       <Button className="bg-blue-500 hover:bg-blue-700 text-white">Contact Us</Button>
@@ -32,7 +37,7 @@ export function Component() {
       <header
         className="bg-cover bg-center h-[600px] text-white"
         style={{
-          backgroundImage: "url('/placeholder.svg')",
+          backgroundImage: "url('/edenn.jpg')",
         }}
       >
         <div className="container mx-auto px-6 py-24">
@@ -43,18 +48,18 @@ export function Component() {
             magna aliqua nostrud.
           </p>
           <div className="flex space-x-4">
-            <Button className="bg-red-600">Donate Now</Button>
+            <Button className="bg-red-600">Partner With Us</Button>
             <Button className="bg-transparent border border-white">Contact Us</Button>
           </div>
         </div>
       </header>
       <section className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <img
+          <Image
             alt="Enriching Lives Image"
             className="aspect-[3/2] object-cover rounded-lg"
             height={400}
-            src="/placeholder.svg"
+            src="/edenn.jpg"
             width={600}
           />
           <Card className="w-full">
@@ -66,7 +71,7 @@ export function Component() {
                 worldwide.
               </p>
               <p className="mb-4">Join us in our journey to create a brighter future for all.</p>
-              <Button className="bg-red-600">Donate Now</Button>
+              <Button className="bg-red-600">Enrich Lives</Button>
             </CardContent>
           </Card>
         </div>
@@ -74,7 +79,7 @@ export function Component() {
 
       <section className="w-full py-6 md:py-12 bg-gray-300">
       <div className="container flex flex-col items-center gap-4 px-4 text-center md:grid md:px-6 md:gap-10 lg:grid-cols-2 lg:justify-between xl:gap-16">
-        <img
+        <Image
           alt="Image"
           className="aspect-video overflow-hidden rounded-xl object-cover object-center"
           height="338"
@@ -106,10 +111,10 @@ export function Component() {
                 worldwide.
               </p>
               <p className="mb-4">Join us in our journey to create a brighter future for all.</p>
-              <Button className="bg-red-600">Donate Now</Button>
+              <Button className="bg-red-600">Empower Young Minds</Button>
             </CardContent>
           </Card>
-          <img
+          <Image
             alt="Enriching Lives Image"
             className="aspect-[3/2] object-cover rounded-lg"
             height={400}
@@ -118,71 +123,21 @@ export function Component() {
           />
         </div>
       </section>
-      <section className="bg-orange-500 text-white py-12">
+      {/* <section className="bg-orange-500 text-white py-12">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-6">Help Today Because Tomorrow you may be Needs someone help</h2>
           <Button className="bg-transparent border border-white">Watch Video</Button>
         </div>
-      </section>
-      {/* <section className="container mx-auto px-6 py-12">
-        <h2 className="text-3xl font-bold text-center mb-12">Our Goal</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <Card className="w-full">
-            <CardContent>
-              <h3 className="text-xl font-bold mb-4">Donate Money</h3>
-              <p className="mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.
-              </p>
-              <p className="mb-4">$2,000.00 donated of $15,000.00 goal</p>
-              <Button className="bg-red-600">Donate</Button>
-            </CardContent>
-          </Card>
-          <Card className="w-full">
-            <CardContent>
-              <h3 className="text-xl font-bold mb-4">Handle With Care</h3>
-              <p className="mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.
-              </p>
-              <p className="mb-4">$8,500.00 donated of $18,000.00 goal</p>
-              <Button className="bg-red-600">Donate</Button>
-            </CardContent>
-          </Card>
-          <Card className="w-full">
-            <CardContent>
-              <h3 className="text-xl font-bold mb-4">Be A Volunteer</h3>
-              <p className="mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.
-              </p>
-              <p className="mb-4">$7,500.00 donated of $13,000.00 goal</p>
-              <Button className="bg-red-600">Donate</Button>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-      <section className="bg-gray-100 py-12">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <h3 className="text-3xl font-bold">1500+</h3>
-              <p className="text-lg">Number Of Supporters</p>
-            </div>
-            <div className="max-w-md">
-              <h3 className="text-xl font-bold mb-4">Our Client Feedback</h3>
-              <p className="mb-4">
-                Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all,
-                love of what you are doing or learning to do, perseverance, learning, studying, sacrifice and most of
-                all, love.
-              </p>
-              <p className="font-semibold">Johnson</p>
-              <p>CEO</p>
-            </div>
-          </div>
-        </div>
       </section> */}
     </div>
+    <footer className="bg-[#1e293b] text-white py-8">
+    <div className="container mx-auto px-4 text-center">
+      <p>© 2024 EDEN. All rights reserved.</p>
+    </div>
+  </footer>
+  </>
   )
 }
+
+
 
