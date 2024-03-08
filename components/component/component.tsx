@@ -59,7 +59,7 @@ export function Component() {
               alt="Enriching Lives Image"
               className="aspect-[3/2] object-cover rounded-lg"
               height={400}
-              src="/edenn.jpg"
+              src="/give.jpg"
               width={600}
             />
           </div>
@@ -86,7 +86,7 @@ export function Component() {
               alt="Image"
               className="aspect-video overflow-hidden rounded-xl object-cover object-center"
               height="338"
-              src="/placeholder.svg"
+              src="/trust.jpg"
               width="600"
             />
           </div>
@@ -126,7 +126,7 @@ export function Component() {
               alt="Enriching Lives Image"
               className="aspect-[3/2] object-cover rounded-lg"
               height={400}
-              src="/placeholder.svg"
+              src="/empowerment.jpg"
               width={600}
             />
           </div>

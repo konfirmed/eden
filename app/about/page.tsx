@@ -56,27 +56,27 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
               <TeamMemberCard
                 name="Tola Adetayo"
-                imageUrl="/Tola Adetayo.jpg"
+                imageUrl="/images/Tola Adetayo.png"
                 bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
               />
               <TeamMemberCard
                 name="Derek Ibeagha"
-                imageUrl="/team/jane.jpg"
+                imageUrl="/images/Tola Adetayo.png"
                 bio="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
               />
               <TeamMemberCard
                 name="Toke Tayo"
-                imageUrl="/team/david.jpg"
+                imageUrl="/images/Tola Adetayo.png"
                 bio="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
               />
               <TeamMemberCard
                 name="Adebayo Okeowo"
-                imageUrl="/team/emily.jpg"
+                imageUrl="/images/Tola Adetayo.png"
                 bio="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
               />
               <TeamMemberCard
                 name="Tope Obasa"
-                imageUrl="/team/michael.jpg"
+                imageUrl="/images/400x300.png"
                 bio="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               />
             </div>
