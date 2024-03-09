@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Navigation } from "@/components/ui/Navigation";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
@@ -8,25 +8,7 @@ export default function About() {
   return (
     <>
       <div key="1" className="bg-white">
-        <nav className="bg-white py-4 shadow-md sticky top-0 z-10">
-          <div className="container mx-auto px-4 flex justify-between items-center">
-            <Image src="/eden.jpg" alt="Eden Logo" className="h-8" width={20} height={30} />
-            <div className="flex items-center space-x-4">
-              <Link className="text-gray-600 hover:text-gray-800" href="/">
-                Home
-              </Link>
-              <Link className="text-gray-600 hover:text-gray-800" href="/about">
-                About Us
-              </Link>
-              <Link className="text-gray-600 hover:text-gray-800" href="/gallery">
-                Gallery
-              </Link>
-              <Link href="/contact-us">
-                <Button className="bg-blue-500 hover:bg-blue-700 text-white">Contact Us</Button>
-              </Link>
-            </div>
-          </div>
-        </nav>
+        <Navigation />
         <section className="bg-[#f1f5f9] text-center py-16">
           <h1 className="text-4xl font-bold text-[#1e293b]">About Us</h1>
           <p className="text-[#64748b] mt-2">Helping / About us</p>
