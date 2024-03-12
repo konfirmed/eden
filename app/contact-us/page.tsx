@@ -9,7 +9,7 @@ export function Navigation() {
   return (
     <nav className="bg-white py-4 shadow-md sticky top-0 z-10">
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <img src="/eden.jpg" alt="Eden Logo" className="h-8" />
+        <img src="/eden new.png" alt="Eden Logo" className="h-8" />
         <div className="flex items-center space-x-4">
           <Link className="text-gray-600 hover:text-gray-800" href="/">
             Home

@@ -7,26 +7,26 @@ import { Card, CardContent } from "@/components/ui/card";
 export default function About() {
   return (
     <>
-      <div key="1" className="bg-white">
-        <nav className="bg-white py-4 shadow-md sticky top-0 z-10">
-          <div className="container mx-auto px-4 flex justify-between items-center">
-            <Image src="/eden.jpg" alt="Eden Logo" className="h-8" width={20} height={30} />
-            <div className="flex items-center space-x-4">
-              <Link className="text-gray-600 hover:text-gray-800" href="/">
-                Home
-              </Link>
-              <Link className="text-gray-600 hover:text-gray-800" href="/about">
-                About Us
-              </Link>
-              <Link className="text-gray-600 hover:text-gray-800" href="/gallery">
-                Gallery
-              </Link>
-              <Link href="/contact-us">
-                <Button className="bg-blue-500 hover:bg-blue-700 text-white">Contact Us</Button>
-              </Link>
-            </div>
+    <div key="1" className="bg-white">
+      <nav className="bg-white py-4 shadow-md sticky top-0 z-10">
+        <div className="container mx-auto px-4 flex justify-between items-center">
+        <img src="/eden new.png" alt="Eden Logo" className="h-8" />
+          <div className="flex items-center space-x-4">
+            <Link className="text-gray-600 hover:text-gray-800" href="/">
+              Home
+            </Link>
+            <Link className="text-gray-600 hover:text-gray-800" href="/about">
+              About Us
+            </Link>
+            <Link className="text-gray-600 hover:text-gray-800" href="/gallery">
+              Gallery
+            </Link>
+            <Link href="/contact-us">
+              <Button className="bg-blue-500 hover:bg-blue-700 text-white">Contact Us</Button>
+            </Link>
           </div>
-        </nav>
+        </div>
+      </nav>
         <section className="bg-[#f1f5f9] text-center py-16">
           <h1 className="text-4xl font-bold text-[#1e293b]">About Us</h1>
           <p className="text-[#64748b] mt-2">Helping / About us</p>
@@ -35,14 +35,10 @@ export default function About() {
           <div className="text-center space-y-4">
             <h2 className="text-3xl font-bold text-[#1e293b]">About Us</h2>
             <p className="text-lg text-[#64748b]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum.
+              EDEN Foundation is a non-governmental organization committed to enriching, developing, and empowering the needy in society. Our foundation was founded on the belief that everyone deserves access to basic necessities and the opportunity to thrive independently.
             </p>
             <p className="text-[#64748b]">
-              Raised Fund 72% Expectation in Countries, Benefiting Over 2.5 Million People.
+              EDEN Foundation was established under the guidance of a divine calling, as inspired by biblical principles that emphasize the importance of compassion and caring for those in need. The foundation is driven by the belief that love should be demonstrated through both words and actions.
             </p>
             <div className="flex justify-center space-x-4">
               <Button className="bg-[#ef4444] text-white">CONTACT EDEN</Button>
@@ -56,27 +52,31 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
               <TeamMemberCard
                 name="Tola Adetayo"
-                imageUrl="/images/Tola Adetayo.png"
+                imageUrl="/images/Team members/Tola Adetayo 300x400.png"
                 bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                
               />
               <TeamMemberCard
                 name="Derek Ibeagha"
-                imageUrl="/images/Tola Adetayo.png"
+                imageUrl="/images/Team members/Derek  Ibeagha 300x400.png"
                 bio="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                
               />
               <TeamMemberCard
                 name="Toke Tayo"
-                imageUrl="/images/Tola Adetayo.png"
+                imageUrl="/images/Team members/Toke Tayo 300x400.png"
                 bio="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                
               />
               <TeamMemberCard
                 name="Adebayo Okeowo"
-                imageUrl="/images/Tola Adetayo.png"
+                imageUrl="/images/Team members/Adebayo Okeowo 300x400.png"
                 bio="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                
               />
               <TeamMemberCard
                 name="Tope Obasa"
-                imageUrl="/images/400x300.png"
+                imageUrl="/images/Team members/Tope Obasa 300x400.png"
                 bio="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               />
             </div>
@@ -122,4 +122,3 @@ function TeamMemberCard({ name, imageUrl, bio }: { name: string, imageUrl: strin
     </Card>
   );
 }
-

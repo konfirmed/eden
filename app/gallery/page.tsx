@@ -5,11 +5,29 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function Component() {
+  
+  const images = [
+    "/images/Gallery photos/photo gallery 1.jpg",
+    "/images/Gallery photos/photo gallery 2.jpg",
+    "/images/Gallery photos/photo gallery 3.jpg",
+    "/images/Gallery photos/photo gallery 4.jpg",
+    "/images/Gallery photos/photo gallery 5.jpg",
+    "/images/Gallery photos/photo gallery 6@0.5x.png",
+    "/images/Gallery photos/photo gallery 7.jpg",
+    "/images/Gallery photos/photo gallery 8.jpg",
+    "/images/Gallery photos/photo gallery 9.jpg",
+    "/images/Gallery photos/photo gallery 10.jpg",
+    "/images/Gallery photos/photo gallery 11.jpg",
+    "/images/Gallery photos/photo gallery 12.jpg",
+    "/images/Gallery photos/photo gallery 13.jpg",
+    "/images/Gallery photos/photo gallery 14.jpg",
+  ];
+
   return (
     <>
       <nav className="bg-white py-4 shadow-md sticky top-0 z-10">
         <div className="container mx-auto px-4 flex justify-between items-center">
-          <Image src="/eden.jpg" alt="Eden Logo" className="h-8" width={20} height={30} />
+        <img src="/eden new.png" alt="Eden Logo" className="h-8" />
           <div className="flex items-center space-x-4">
             <Link className="text-gray-600 hover:text-gray-800" href="/">
               Home
@@ -36,20 +54,21 @@ export default function Component() {
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 p-4 md:p-0">
-          {Array.from({ length: 8 }, (_, index) => (
+          {/* Iterate over images array and render cards */}
+          {images.map((imageUrl, index) => (
             <Card key={index} className="group relative rounded-lg overflow-hidden aspect-[4/3]">
               <Image
-                src="/placeholder.svg"
+                src={imageUrl} // Use the current image URL
                 alt={`Campaign Image ${index + 1}`}
                 className="object-cover object-center"
                 width={400}
                 height={300}
               />
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 opacity-0 transition-opacity bg-gray-900/90 group-hover:opacity-90 dark:bg-gray-50/90 dark:opacity-90">
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 opacity-0 transition-opacity bg-gray-900/90 dark:bg-gray-50/90 dark:opacity-90">
                 <img
                   alt={`Image ${index + 1}`}
                   className="aspect-[4/3] object-cover object-center rounded-t-lg"
-                  src="/placeholder.svg"
+                  src={imageUrl} // Use the current image URL
                   width={100}
                   height={75}
                 />
@@ -81,5 +100,3 @@ export default function Component() {
     </>
   );
 }
-
-
