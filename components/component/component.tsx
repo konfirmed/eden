@@ -14,7 +14,12 @@ export function Component() {
       <nav className="bg-white py-4 shadow-md sticky top-0 z-10">
         <div className="container mx-auto px-4 flex justify-between items-center">
          
-          <img src="/eden new.png" alt="Eden Logo" className="h-8" />
+        <Image 
+          src="/eden new.png" 
+          alt="Eden Logo"  
+          height={100}
+          width={100}
+        />
 
           <div className="flex items-center space-x-4">
             <Link className="text-gray-600 hover:text-gray-800" href="/">
@@ -36,7 +41,7 @@ export function Component() {
       <header
         className="bg-cover bg-center h-[600px] text-white"
         style={{
-          backgroundImage: "url('/eden hero.jpg')",
+          backgroundImage: "url('/hero image.png')",
         }}
       >
         <div className="container mx-auto px-6 py-24">
