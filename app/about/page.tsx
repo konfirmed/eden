@@ -64,13 +64,13 @@ export default function About() {
               <TeamMemberCard
                 name="Derek Ibeagha"
                 imageUrl="/images/Team members/Derek  Ibeagha 300x400.png"
-                bio="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                bio="Derek is a renowned senior economist in the Central Bank of Nigeria's Research Department, where he has demonstrated remarkable intelligence in the fields of economic development and research.."
                 
               />
               <TeamMemberCard
                 name="Toke Tayo"
                 imageUrl="/images/Team members/Toke Tayo 300x400.png"
-                bio="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                bio="Toke Tayo, a dynamic architect and entrepreneur, enhances our board with over 12 years of architectural practice."
                 
               />
               <TeamMemberCard
