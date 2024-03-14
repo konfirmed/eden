@@ -126,7 +126,7 @@ export function Component() {
               alt="Enriching Lives Image"
               className="aspect-[3/2] object-cover rounded-lg"
               height={400}
-              src="/empowerment.jpg"
+              src="/originals/empowerment.jpg"
               width={600}
             />
           </div>
