@@ -1,6 +1,12 @@
 import React from 'react';
 
-const Select = ({ id, required, children }) => {
+interface SelectProps {
+  id: string;
+  required?: boolean;
+  children: React.ReactNode;
+}
+
+const Select: React.FC<SelectProps> = ({ id, required, children }) => {
   return (
     <select
       id={id}

@@ -70,7 +70,7 @@ export default function Component() {
                 height={300}
               />
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 opacity-0 transition-opacity bg-gray-900/90 dark:bg-gray-50/90 dark:opacity-90">
-                <img
+                <Image
                   alt={`Image ${index + 1}`}
                   className="aspect-[4/3] object-cover object-center rounded-t-lg"
                   src={imageUrl} // Use the current image URL
