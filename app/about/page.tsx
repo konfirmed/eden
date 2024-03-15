@@ -58,7 +58,7 @@ export default function About() {
               <TeamMemberCard
                 name="Tola Adetayo"
                 imageUrl="/images/Team members/Tola Adetayo 300x400.png"
-                bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                bio="Adetope brings a profound commitment to supporting at-risk youth, coupled with over 10 years of experience working with children and teenagers, and more than five years of expertise in diverse administrative roles. "
                 
               />
               <TeamMemberCard
