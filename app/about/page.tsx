@@ -76,7 +76,7 @@ export default function About() {
               <TeamMemberCard
                 name="Adebayo Okeowo"
                 imageUrl="/images/Team members/Adebayo Okeowo 300x400.png"
-                bio="Duis ate iure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                bio="Duis ate iure dolor in rerehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
                 
               />
               <TeamMemberCard
