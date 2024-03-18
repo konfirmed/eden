@@ -1,38 +1,38 @@
 import Link from "next/link";
+import Image from "next/image";
 import Label from "@/components/ui/Label";
 import Input from "@/components/ui/Input";
 import Textarea from "@/components/ui/Textarea";
 import { Button } from "@/components/ui/button";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
-export function Navigation() {
-  return (
-    <nav className="bg-white py-4 shadow-md sticky top-0 z-10">
-      <div className="container mx-auto px-4 flex justify-between items-center">
-        <img src="/eden new.png" alt="Eden Logo" className="h-8" />
-        <div className="flex items-center space-x-4">
-          <Link className="text-gray-600 hover:text-gray-800" href="/">
-            Home
-          </Link>
-          <Link className="text-gray-600 hover:text-gray-800" href="/about">
-            About Us
-          </Link>
-          <Link className="text-gray-600 hover:text-gray-800" href="/gallery">
-            Gallery
-          </Link>
-          <Link href="/contact-us">
-            <Button className="bg-blue-500 hover:bg-blue-700 text-white">Contact Us</Button>
-          </Link>
-        </div>
-      </div>
-    </nav>
-  );
-}
-
 const ContactPage = () => {
   return (
     <div className="flex flex-col min-h-screen">
-      <Navigation />
+      <nav className="bg-white py-4 shadow-md sticky top-0 z-10">
+        <div className="container mx-auto px-4 flex justify-between items-center">
+          <Image 
+            src="/eden new.png" 
+            alt="Eden Logo"  
+            height={100}
+            width={100}
+          />
+          <div className="flex items-center space-x-4">
+            <Link className="text-gray-600 hover:text-gray-800" href="/">
+              Home
+            </Link>
+            <Link className="text-gray-600 hover:text-gray-800" href="/about">
+              About Us
+            </Link>
+            <Link className="text-gray-600 hover:text-gray-800" href="/gallery">
+              Gallery
+            </Link>
+            <Link href="/contact-us">
+              <Button className="bg-blue-500 hover:bg-blue-700 text-white">Contact Us</Button>
+            </Link>
+          </div>
+        </div>
+      </nav>
       <div className="flex-grow px-4 py-8">
         <form className="w-full max-w-md mx-auto space-y-6">
           <div className="space-y-2 text-center">
