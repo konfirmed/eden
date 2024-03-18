@@ -1,9 +1,7 @@
-import Link from "next/link";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Card, CardContent } from "@/components/ui/card";
-
+import Navigation from "@/components/Navigation"; 
 export default function Component() {
   
   const images = [
@@ -25,30 +23,7 @@ export default function Component() {
 
   return (
     <>
-      <nav className="bg-white py-4 shadow-md sticky top-0 z-10">
-        <div className="container mx-auto px-4 flex justify-between items-center">
-        <Image 
-          src="/eden new.png" 
-          alt="Eden Logo"  
-          height={100}
-          width={100}
-        />
-          <div className="flex items-center space-x-4">
-            <Link className="text-gray-600 hover:text-gray-800" href="/">
-              Home
-            </Link>
-            <Link className="text-gray-600 hover:text-gray-800" href="/about">
-              About Us
-            </Link>
-            <Link className="text-gray-600 hover:text-gray-800" href="/gallery">
-              Gallery
-            </Link>
-            <Link href="/contact-us">
-              <Button className="bg-blue-500 hover:bg-blue-700 text-white">Contact Us</Button>
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navigation /> 
       <div className="w-full py-6 space-y-4">
         <div className="container space-y-2 text-center px-4 md:px-6">
           <div className="space-y-2">
@@ -63,7 +38,7 @@ export default function Component() {
           {images.map((imageUrl, index) => (
             <Card key={index} className="group relative rounded-lg overflow-hidden aspect-[4/3]">
               <Image
-                src={imageUrl} // Use the current image URL
+                src={imageUrl} 
                 alt={`Campaign Image ${index + 1}`}
                 className="object-cover object-center"
                 width={400}
@@ -73,7 +48,7 @@ export default function Component() {
                 <Image
                   alt={`Image ${index + 1}`}
                   className="aspect-[4/3] object-cover object-center rounded-t-lg"
-                  src={imageUrl} // Use the current image URL
+                  src={imageUrl} 
                   width={100}
                   height={75}
                 />

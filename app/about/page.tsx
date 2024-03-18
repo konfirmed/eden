@@ -1,37 +1,15 @@
-import Link from "next/link";
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Card, CardContent } from "@/components/ui/card";
+import Navigation from "@/components/Navigation"; 
 
 export default function About() {
   return (
     <>
-    <div key="1" className="bg-white">
-      <nav className="bg-white py-4 shadow-md sticky top-0 z-10">
-        <div className="container mx-auto px-4 flex justify-between items-center">
-        <Image 
-          src="/eden new.png" 
-          alt="Eden Logo"  
-          height={100}
-          width={100}
-        />
-          <div className="flex items-center space-x-4">
-            <Link className="text-gray-600 hover:text-gray-800" href="/">
-              Home
-            </Link>
-            <Link className="text-gray-600 hover:text-gray-800" href="/about">
-              About Us
-            </Link>
-            <Link className="text-gray-600 hover:text-gray-800" href="/gallery">
-              Gallery
-            </Link>
-            <Link href="/contact-us">
-              <Button className="bg-blue-500 hover:bg-blue-700 text-white">Contact Us</Button>
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navigation /> 
+      <div key="1" className="bg-white">
         <section className="bg-[#f1f5f9] text-center py-16">
           <h1 className="text-4xl font-bold text-[#1e293b]">About Us</h1>
           <p className="text-[#64748b] mt-2">Helping / About us</p>
@@ -59,25 +37,21 @@ export default function About() {
                 name="Tola Adetayo"
                 imageUrl="/images/Team members/Tola Adetayo 300x400.png"
                 bio="Adetope brings a profound commitment to supporting at-risk youth, coupled with over 10 years of experience working with children and teenagers, and more than five years of expertise in diverse administrative roles. "
-                
               />
               <TeamMemberCard
                 name="Derek Ibeagha"
                 imageUrl="/images/Team members/Derek  Ibeagha 300x400.png"
                 bio="Derek is a renowned senior economist in the Central Bank of Nigeria's Research Department, where he has demonstrated remarkable intelligence in the fields of economic development and research.."
-                
               />
               <TeamMemberCard
                 name="Toke Tayo"
                 imageUrl="/images/Team members/Toke Tayo 300x400.png"
                 bio="Toke Tayo, a dynamic architect and entrepreneur, enhances our board with over 12 years of architectural practice."
-                
               />
               <TeamMemberCard
                 name="Adebayo Okeowo"
                 imageUrl="/images/Team members/Adebayo Okeowo 300x400.png"
                 bio="Duis ate iure dolor in rerehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-                
               />
               <TeamMemberCard
                 name="Tope Obasa"
