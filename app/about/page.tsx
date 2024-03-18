@@ -10,7 +10,12 @@ export default function About() {
     <div key="1" className="bg-white">
       <nav className="bg-white py-4 shadow-md sticky top-0 z-10">
         <div className="container mx-auto px-4 flex justify-between items-center">
-        <img src="/eden new.png" alt="Eden Logo" className="h-8" />
+        <Image 
+          src="/eden new.png" 
+          alt="Eden Logo"  
+          height={100}
+          width={100}
+        />
           <div className="flex items-center space-x-4">
             <Link className="text-gray-600 hover:text-gray-800" href="/">
               Home
@@ -53,25 +58,25 @@ export default function About() {
               <TeamMemberCard
                 name="Tola Adetayo"
                 imageUrl="/images/Team members/Tola Adetayo 300x400.png"
-                bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                bio="Adetope brings a profound commitment to supporting at-risk youth, coupled with over 10 years of experience working with children and teenagers, and more than five years of expertise in diverse administrative roles. "
                 
               />
               <TeamMemberCard
                 name="Derek Ibeagha"
                 imageUrl="/images/Team members/Derek  Ibeagha 300x400.png"
-                bio="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                bio="Derek is a renowned senior economist in the Central Bank of Nigeria's Research Department, where he has demonstrated remarkable intelligence in the fields of economic development and research.."
                 
               />
               <TeamMemberCard
                 name="Toke Tayo"
                 imageUrl="/images/Team members/Toke Tayo 300x400.png"
-                bio="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                bio="Toke Tayo, a dynamic architect and entrepreneur, enhances our board with over 12 years of architectural practice."
                 
               />
               <TeamMemberCard
                 name="Adebayo Okeowo"
                 imageUrl="/images/Team members/Adebayo Okeowo 300x400.png"
-                bio="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                bio="Duis ate iure dolor in rerehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
                 
               />
               <TeamMemberCard
