@@ -48,7 +48,7 @@ export function Component() {
           <h1 className="text-5xl font-bold mb-4">We Help You</h1>
           <h2 className="text-3xl font-bold mb-8">SAVE THE CHILDRENS.</h2>
           <p className="mb-8 text-lg font-bold">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua nostrud.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua nostrud .
           </p>
           <div className="flex space-x-4">
             <Button className="bg-red-600">Partner With Us</Button>
