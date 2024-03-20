@@ -1,22 +1,31 @@
-import Link from "next/link";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { Card, CardContent } from "@/components/ui/card";
+'use client';
+import { useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import Link from 'next/link';
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { Card, CardContent } from '@/components/ui/card';
 
 export default function About() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // Added state for menu
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <>
-    <div key="1" className="bg-white">
+      <div key="1" className="bg-white">
+        {/* Desktop Navigation */}
       <nav className="bg-white py-4 shadow-md sticky top-0 z-10">
         <div className="container mx-auto px-4 flex justify-between items-center">
-        <Image 
-          src="/eden new.png" 
-          alt="Eden Logo"  
-          height={100}
-          width={100}
-        />
-          <div className="flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-4 flex-grow">
+            <Link className="text-gray-600 hover:text-gray-800" href="/">
+              <Image src="/eden new.png" alt="Eden Logo" height={100} width={100} />
+            </Link>
+          </div>
+          <div className="hidden md:flex items-center space-x-4">
             <Link className="text-gray-600 hover:text-gray-800" href="/">
               Home
             </Link>
@@ -32,6 +41,41 @@ export default function About() {
           </div>
         </div>
       </nav>
+
+      {/* Mobile Navigation */}
+      <div className="md:hidden">
+        <nav className="bg-white py-4 shadow-md sticky top-0 z-10">
+          <div className="container mx-auto px-4 flex justify-between items-center">
+            <Link href="/" className="text-gray-600 hover:text-gray-800">
+              <Image src="/eden new.png" alt="Eden Logo" height={100} width={100} />
+            </Link>
+            <button onClick={toggleMenu} className="md:hidden text-3xl text-gray-600 focus:outline-none">
+              {isMenuOpen ? <FaTimes /> : <FaBars />}
+            </button>
+          </div>
+        </nav>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="bg-white py-4 shadow-md">
+            <div className="container mx-auto px-4 flex flex-col items-center">
+              <Link href="/" className="text-gray-600 hover:text-gray-800">
+                Home
+              </Link>
+              <Link href="/about" className="text-gray-600 hover:text-gray-800">
+                About Us
+              </Link>
+              <Link href="/gallery" className="text-gray-600 hover:text-gray-800">
+                Gallery
+              </Link>
+              <Link href="/contact-us">
+                <Button className="bg-blue-500 hover:bg-blue-700 text-white">Contact Us</Button>
+              </Link>
+            </div>
+          </div>
+        )}
+      </div>
+
         <section className="bg-[#f1f5f9] text-center py-16">
           <h1 className="text-4xl font-bold text-[#1e293b]">About Us</h1>
           <p className="text-[#64748b] mt-2">Helping / About us</p>
@@ -76,7 +120,7 @@ export default function About() {
               <TeamMemberCard
                 name="Adebayo Okeowo"
                 imageUrl="/images/Team members/Adebayo Okeowo 300x400.png"
-                bio="Duis ate iure dolor in rerehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                bio="Duis ate iure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
                 
               />
               <TeamMemberCard
