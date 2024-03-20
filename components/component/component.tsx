@@ -1,14 +1,91 @@
-import { Button } from "@/components/ui/button";
-import { CardContent, Card } from "@/components/ui/card";
+'use client';
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
-import Navigation from "@/components/Navigation"; 
+import { Button } from '@/components/ui/button';
+import { FaBars, FaTimes, FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { ReactNode } from 'react';
+
+// Placeholder Card component
+const Card = ({ children }: { children: ReactNode }) => {
+  return <div className="bg-white shadow-md rounded-lg">{children}</div>;
+};
+
+// Placeholder CardContent component
+const CardContent = ({ children }: { children: ReactNode }) => {
+  return <div className="p-6">{children}</div>;
+};
+
+
 
 export function Component() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div key="1" className="bg-white">
-      <Navigation /> 
+      {/* Desktop Navigation */}
+      <nav className="bg-white py-4 shadow-md sticky top-0 z-10">
+        <div className="container mx-auto px-4 flex justify-between items-center">
+          <div className="hidden md:flex items-center space-x-4 flex-grow">
+            <Link className="text-gray-600 hover:text-gray-800" href="/">
+              <Image src="/eden new.png" alt="Eden Logo" height={100} width={100} />
+            </Link>
+          </div>
+          <div className="hidden md:flex items-center space-x-4">
+            <Link className="text-gray-600 hover:text-gray-800" href="/">
+              Home
+            </Link>
+            <Link className="text-gray-600 hover:text-gray-800" href="/about">
+              About Us
+            </Link>
+            <Link className="text-gray-600 hover:text-gray-800" href="/gallery">
+              Gallery
+            </Link>
+            <Link href="/contact-us">
+              <Button className="bg-blue-500 hover:bg-blue-700 text-white">Contact Us</Button>
+            </Link>
+          </div>
+        </div>
+      </nav>
+
+      {/* Mobile Navigation */}
+      <div className="md:hidden">
+        <nav className="bg-white py-4 shadow-md sticky top-0 z-10">
+          <div className="container mx-auto px-4 flex justify-between items-center">
+            <Link href="/" className="text-gray-600 hover:text-gray-800">
+              <Image src="/eden new.png" alt="Eden Logo" height={100} width={100} />
+            </Link>
+            <button onClick={toggleMenu} className="md:hidden text-3xl text-gray-600 focus:outline-none">
+              {isMenuOpen ? <FaTimes /> : <FaBars />}
+            </button>
+          </div>
+        </nav>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="bg-white py-4 shadow-md">
+            <div className="container mx-auto px-4 flex flex-col items-center">
+              <Link href="/" className="text-gray-600 hover:text-gray-800">
+                Home
+              </Link>
+              <Link href="/about" className="text-gray-600 hover:text-gray-800">
+                About Us
+              </Link>
+              <Link href="/gallery" className="text-gray-600 hover:text-gray-800">
+                Gallery
+              </Link>
+              <Link href="/contact-us">
+                <Button className="bg-blue-500 hover:bg-blue-700 text-white">Contact Us</Button>
+              </Link>
+            </div>
+          </div>
+        )}
+      </div>
+
       <header
         className="bg-cover bg-center h-[600px] text-white"
         style={{
@@ -17,9 +94,9 @@ export function Component() {
       >
         <div className="container mx-auto px-6 py-24">
           <h1 className="text-5xl font-bold mb-4">We Help You</h1>
-          <h2 className="text-3xl font-bold mb-8">SAVE THE CHILDRENS.</h2>
+          <h2 className="text-3xl font-bold mb-8">SAVE THE CHILDREN.</h2>
           <p className="mb-8 text-lg font-bold">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt  .
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua nostrud.
           </p>
           <div className="flex space-x-4">
             <Button className="bg-red-600">Partner With Us</Button>
@@ -80,7 +157,6 @@ export function Component() {
           </div>
         </div>
       </section>
-
       <section className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="order-1 md:order-2">
@@ -108,6 +184,13 @@ export function Component() {
           </div>
         </div>
       </section>
+
+      {/* <section className="bg-orange-500 text-white py-12">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold mb-6">Help Today Because Tomorrow you may be Needs someone help</h2>
+          <Button className="bg-transparent border border-white">Watch Video</Button>
+        </div>
+      </section> */}
 
 <footer className="bg-[#1e293b] text-white py-8">
         <div className="container mx-auto px-4 text-center">

@@ -13,10 +13,9 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="bg-white py-4 shadow-md sticky top-0 z-10">
+    <nav className="bg-white py-4 shadow-md fixed top-0 left-0 right-0 z-50">
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link href="/">
-          
           <Image
             src="/eden new.png"
             alt="Eden Logo"
@@ -24,7 +23,7 @@ const Navigation = () => {
             width={100}
           />
         </Link>
-        
+
         <div className="md:hidden">
           {isMenuOpen ? (
             <FaTimes
@@ -38,16 +37,16 @@ const Navigation = () => {
             />
           )}
         </div>
-        
-        <div className="flex items-center space-x-4">
+
+        <div className="hidden md:flex items-center space-x-4">
           <Link href="/">
-            <div className="text-gray-600 hover:text-gray-800">Home</div>
+            <span className="text-gray-600 hover:text-gray-800">Home</span>
           </Link>
           <Link href="/about">
-            <div className="text-gray-600 hover:text-gray-800">About Us</div>
+            <span className="text-gray-600 hover:text-gray-800">About Us</span>
           </Link>
           <Link href="/gallery">
-            <div className="text-gray-600 hover:text-gray-800">Gallery</div>
+            <span className="text-gray-600 hover:text-gray-800">Gallery</span>
           </Link>
           <Link href="/contact-us">
             <Button className="bg-blue-500 hover:bg-blue-700 text-white">
