@@ -1,6 +1,8 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
+import { db } from '@/lib/firebase'; // Import your Firebase config
+import { collection, addDoc } from 'firebase/firestore';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';

@@ -3,19 +3,15 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import { CardContent, Card } from "@/components/ui/card"
 import { FaBars, FaTimes, FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { ReactNode } from 'react';
 
-// Placeholder Card component
-const Card = ({ children }: { children: ReactNode }) => {
-  return <div className="bg-white shadow-md rounded-lg">{children}</div>;
-};
 
-// Placeholder CardContent component
-const CardContent = ({ children }: { children: ReactNode }) => {
+// Placeholder CardContentWrapper component
+const CardContentWrapper = ({ children }: { children: ReactNode }) => {
   return <div className="p-6">{children}</div>;
 };
-
 
 
 export function Component() {
@@ -101,6 +97,7 @@ export function Component() {
           <div className="flex space-x-4">
             <Button className="bg-red-600">Partner With Us</Button>
             <Button className="bg-transparent border border-white">Contact Us</Button>
+
           </div>
         </div>
       </header>
@@ -117,7 +114,7 @@ export function Component() {
             />
           </div>
           <div className="order-2 md:order-1">
-            <Card className="w-full p-4"> 
+          <Card className="w-full p-4"> 
               <CardContent>
                 <h3 className="text-2xl font-bold mb-4">Enriching Lives</h3>
                 <p className="mb-4">
@@ -146,7 +143,7 @@ export function Component() {
           <div className="order-1 md:order-2">
             <div className="flex flex-col justify-center space-y-4">
               <p className="text-sm font-semibold tracking-wide uppercase text-gray-500 dark:text-gray-400">
-                Trusted by developers
+                Development
               </p>
               <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                 The definitive guide to modern web development. The platform for rapid progress. Let your team focus on
