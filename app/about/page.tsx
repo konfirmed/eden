@@ -140,7 +140,8 @@ export default function About() {
       <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
        <FaTwitter className="text-white text-xl hover:text-blue-400" />
       </a>
-      <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.instagram.com/edenrestorationng?igsh=MTUwY3Y1dGFjcGl6aA==
+" target="_blank" rel="noopener noreferrer">
        <FaInstagram className="text-white text-xl hover:text-pink-500" />
       </a>
       <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">

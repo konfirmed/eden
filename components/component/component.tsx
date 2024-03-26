@@ -116,11 +116,10 @@ export function Component() {
           <div className="order-2 md:order-1">
           <Card className="w-full p-4"> 
               <CardContent>
-                <h3 className="text-2xl font-bold mb-4">Enriching Lives</h3>
+                <h3 className="text-2xl font-bold mb-4">Enrichment Program</h3>
                 <p className="mb-4">
-                  Enriching lives is at the core of our mission. We strive to make a positive impact by providing
-                  essential support and resources to those in need, fostering growth and empowerment in communities
-                  worldwide.
+                Enhancing Lives Through Nourishment and Support
+At EDEN Foundation, our Enrichment program is designed to provide vital support and nourishment to individuals and families in need. Through our Food Assistance Program, we strive to enrich the lives of the less privileged by offering essential dry goods, non-perishable items, and eventually perishable items to ensure their nutritional needs are met. Our ultimate goal is to provide consistent and reliable assistance to promote sustained well-being.
                 </p>
                 <p className="mb-4">Join us in our journey to create a brighter future for all.</p>
                 <Button className="bg-red-600">Enrich Lives</Button>
@@ -143,12 +142,11 @@ export function Component() {
           <div className="order-1 md:order-2">
             <div className="flex flex-col justify-center space-y-4">
               <p className="text-sm font-semibold tracking-wide uppercase text-gray-500 dark:text-gray-400">
-                Development
+              Development Program
               </p>
               <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                The definitive guide to modern web development. The platform for rapid progress. Let your team focus on
-                shipping features instead of managing infrastructure with automated CI/CD, built-in testing, and integrated
-                collaboration.
+              Empowering Communities Through Economic Independence
+As part of our commitment to empowering communities, EDEN Foundation's Development Program focuses on providing micro-enterprise funding to unemployed families. By offering financial assistance to start microbusinesses, we aim to create sustainable livelihoods and foster economic independence among our beneficiaries. Through this initiative, we seek to uplift individuals and families, enabling them to build a brighter future for themselves and their communities.
               </p>
             </div>
           </div>
@@ -159,11 +157,10 @@ export function Component() {
           <div className="order-1 md:order-2">
             <Card className="w-full p-4"> 
               <CardContent>
-                <h3 className="text-2xl font-bold mb-4">Empowerment</h3>
+                <h3 className="text-2xl font-bold mb-4">Empowerment Program</h3>
                 <p className="mb-4">
-                  Enriching lives is at the core of our mission. We strive to make a positive impact by providing
-                  essential support and resources to those in need, fostering growth and empowerment in communities
-                  worldwide.
+                Equipping Individuals for Success and Self-Sufficiency
+At EDEN Foundation, empowerment lies at the heart of our mission. Our Empowerment Program aims to equip individuals with the necessary tools and skills to enhance their employability and overall well-being. Following our initial outreach efforts, we offer Skills Training and Development programs that provide training in basic skill acquisition. By arming individuals with the knowledge and resources they need to succeed, we empower them to take control of their futures and realize their full potential.
                 </p>
                 <p className="mb-4">Join us in our journey to create a brighter future for all.</p>
                 <Button className="bg-red-600">Empower Young Minds</Button>
@@ -198,7 +195,8 @@ export function Component() {
             <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
               <FaTwitter className="text-white text-xl hover:text-blue-400" />
             </a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/edenrestorationng?igsh=MTUwY3Y1dGFjcGl6aA==
+" target="_blank" rel="noopener noreferrer">
               <FaInstagram className="text-white text-xl hover:text-pink-500" />
             </a>
             <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
