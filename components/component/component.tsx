@@ -95,9 +95,9 @@ export function Component() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua nostrud.
           </p>
           <div className="flex space-x-4">
-            <Button className="bg-red-600">Partner With Us</Button>
-            <Button className="bg-transparent border border-white">Contact Us</Button>
-
+          <Link href="/contact-us">
+       <Button className="bg-[#e27227c7] text-white">CONTACT EDEN</Button>
+       </Link>
           </div>
         </div>
       </header>
@@ -109,7 +109,7 @@ export function Component() {
               alt="Enriching Lives Image"
               className="aspect-[3/2] object-cover rounded-lg"
               height={400}
-              src="/give.jpg"
+              src="/enrichment.png"
               width={600}
             />
           </div>
@@ -122,7 +122,6 @@ export function Component() {
 At EDEN Foundation, our Enrichment program is designed to provide vital support and nourishment to individuals and families in need. Through our Food Assistance Program, we strive to enrich the lives of the less privileged by offering essential dry goods, non-perishable items, and eventually perishable items to ensure their nutritional needs are met. Our ultimate goal is to provide consistent and reliable assistance to promote sustained well-being.
                 </p>
                 <p className="mb-4">Join us in our journey to create a brighter future for all.</p>
-                <Button className="bg-red-600">Enrich Lives</Button>
               </CardContent>
             </Card>
           </div>
@@ -135,13 +134,13 @@ At EDEN Foundation, our Enrichment program is designed to provide vital support 
               alt="Image"
               className="aspect-video overflow-hidden rounded-xl object-cover object-center"
               height="338"
-              src="/trust.jpg"
+              src="/development.png"
               width="600"
             />
           </div>
           <div className="order-1 md:order-2">
             <div className="flex flex-col justify-center space-y-4">
-              <p className="text-sm font-semibold tracking-wide uppercase text-gray-500 dark:text-gray-400">
+              <p className="text-2xl font-bold mb-4">
               Development Program
               </p>
               <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
@@ -163,7 +162,6 @@ As part of our commitment to empowering communities, EDEN Foundation's Developme
 At EDEN Foundation, empowerment lies at the heart of our mission. Our Empowerment Program aims to equip individuals with the necessary tools and skills to enhance their employability and overall well-being. Following our initial outreach efforts, we offer Skills Training and Development programs that provide training in basic skill acquisition. By arming individuals with the knowledge and resources they need to succeed, we empower them to take control of their futures and realize their full potential.
                 </p>
                 <p className="mb-4">Join us in our journey to create a brighter future for all.</p>
-                <Button className="bg-red-600">Empower Young Minds</Button>
               </CardContent>
             </Card>
           </div>
@@ -172,7 +170,7 @@ At EDEN Foundation, empowerment lies at the heart of our mission. Our Empowermen
               alt="Enriching Lives Image"
               className="aspect-[3/2] object-cover rounded-lg"
               height={400}
-              src="/originals/empowerment.jpg"
+              src="/empowerment.png"
               width={600}
             />
           </div>

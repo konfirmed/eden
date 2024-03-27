@@ -89,8 +89,9 @@ export default function About() {
        EDEN Foundation was established under the guidance of a divine calling, as inspired by biblical principles that emphasize the importance of compassion and caring for those in need. The foundation is driven by the belief that love should be demonstrated through both words and actions.
       </p>
       <div className="flex justify-center space-x-4">
-       <Button className="bg-[#ef4444] text-white">CONTACT EDEN</Button>
-       <Button className="bg-[#f97316] text-white">Volunteer</Button>
+      <Link href="/contact-us">
+       <Button className="bg-[#e27227c7] text-white">CONTACT EDEN</Button>
+       </Link>
       </div>
      </div>
     </section>

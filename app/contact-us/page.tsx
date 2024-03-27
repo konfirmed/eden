@@ -40,6 +40,25 @@ const ContactPage = () => {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
   event.preventDefault();
 
+
+  // Send data using AJAX 
+  try {
+    const response = await fetch('/app/api/send-contact-email', { // Adjust if your API route is different
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formState)
+    });
+    if (!response.ok) {
+      throw new Error(`Network error: ${response.status}`); 
+  }
+
+  const responseData = await response.json(); // Try to get error details
+  console.log('Response from server:', responseData); 
+
+} catch (error) {
+  console.error("Error submitting form:", error);
+} 
+
    // Reset errors before validation
    setFormErrors({ name: '', email: '', subject: '', message: '' });
 
