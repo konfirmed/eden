@@ -92,7 +92,7 @@ export function Component() {
           <h1 className="text-5xl font-bold mb-4">We Help You</h1>
           <h2 className="text-3xl font-bold mb-8">SAVE THE CHILDREN.</h2>
           <p className="mb-8 text-lg font-bold">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua nostrud.
+            At EDEN, we are a dedicated foundation committed to making a positive impact in society.
           </p>
           <div className="flex space-x-4">
           <Link href="/contact-us">
