@@ -128,29 +128,31 @@ At EDEN Foundation, our Enrichment program is designed to provide vital support 
         </div>
       </section>
       <section className="w-full py-6 md:py-12 bg-gray-300">
-        <div className="container flex flex-col items-center gap-4 px-4 text-center md:grid md:px-6 md:gap-10 lg:grid-cols-2 lg:justify-between xl:gap-16">
-          <div className="order-2 md:order-1">
-            <Image
-              alt="Image"
-              className="aspect-video overflow-hidden rounded-xl object-cover object-center"
-              height="338"
-              src="/development.png"
-              width="600"
-            />
-          </div>
-          <div className="order-1 md:order-2">
-            <div className="flex flex-col justify-center space-y-4">
-              <p className="text-2xl font-bold mb-4">
-              Development Program
-              </p>
-              <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-              Empowering Communities Through Economic Independence
-As part of our commitment to empowering communities, EDEN Foundation's Development Program focuses on providing micro-enterprise funding to unemployed families. By offering financial assistance to start microbusinesses, we aim to create sustainable livelihoods and foster economic independence among our beneficiaries. Through this initiative, we seek to uplift individuals and families, enabling them to build a brighter future for themselves and their communities.
-              </p>
-            </div>
-          </div>
+  <div className="container mx-auto px-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="order-2 md:order-1">
+        <Image
+          alt="Image"
+          className="aspect-video overflow-hidden rounded-xl object-cover object-center"
+          height="338"
+          src="/development.png"
+          width="600"
+        />
+      </div>
+      <div className="order-1 md:order-2">
+        <div className="flex flex-col justify-center space-y-4">
+          <p className="text-2xl font-bold mb-4">
+            Development Program
+          </p>
+          <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+            Empowering Communities Through Economic Independence
+            As part of our commitment to empowering communities, EDEN Foundations Development Program focuses on providing micro-enterprise funding to unemployed families. By offering financial assistance to start microbusinesses, we aim to create sustainable livelihoods and foster economic independence among our beneficiaries. Through this initiative, we seek to uplift individuals and families, enabling them to build a brighter future for themselves and their communities.
+          </p>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
       <section className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="order-1 md:order-2">
