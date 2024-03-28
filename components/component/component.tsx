@@ -145,8 +145,8 @@ At EDEN Foundation, our Enrichment program is designed to provide vital support 
             Development Program
           </p>
           <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-            Empowering Communities Through Economic Independence
-            As part of our commitment to empowering communities, EDEN Foundations Development Program focuses on providing micro-enterprise funding to unemployed families. By offering financial assistance to start microbusinesses, we aim to create sustainable livelihoods and foster economic independence among our beneficiaries. Through this initiative, we seek to uplift individuals and families, enabling them to build a brighter future for themselves and their communities.
+            Equipping Individuals for Success and Self-Sufficiency At EDEN Foundation, empowerment lies at the heart of our mission. Our Empowerment Program aims to equip individuals with the necessary tools and skills to enhance their employability and overall well-being. Following our initial outreach efforts, we offer Skills Training and Development programs that provide training in basic skill acquisition. By arming individuals with the knowledge and resources they need to succeed, we empower them to take control of their futures and realize their full potential.
+Join us in our journey to create a brighter future for all.
           </p>
         </div>
       </div>
@@ -160,8 +160,7 @@ At EDEN Foundation, our Enrichment program is designed to provide vital support 
               <CardContent>
                 <h3 className="text-2xl font-bold mb-4">Empowerment Program</h3>
                 <p className="mb-4">
-                Equipping Individuals for Success and Self-Sufficiency
-At EDEN Foundation, empowerment lies at the heart of our mission. Our Empowerment Program aims to equip individuals with the necessary tools and skills to enhance their employability and overall well-being. Following our initial outreach efforts, we offer Skills Training and Development programs that provide training in basic skill acquisition. By arming individuals with the knowledge and resources they need to succeed, we empower them to take control of their futures and realize their full potential.
+               Empowering Communities Through Economic Independence As part of our commitment to empowering communities, EDEN Foundations Development Program focuses on providing micro-enterprise funding to unemployed families. By offering financial assistance to start microbusinesses, we aim to create sustainable livelihoods and foster economic independence among our beneficiaries. Through this initiative, we seek to uplift individuals and families, enabling them to build a brighter future for themselves and their communities.
                 </p>
                 <p className="mb-4">Join us in our journey to create a brighter future for all.</p>
               </CardContent>
