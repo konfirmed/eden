@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram,   } from 'react-icons/fa';
 import Label from '@/components/ui/Label';
 import Input from '@/components/ui/Input';
 import Textarea from '@/components/ui/Textarea';
@@ -41,7 +41,7 @@ const ContactPage = () => {
     event.preventDefault();
 
     // Inside the handleSubmit function
-const handler = '/api/send-contact-email';
+const handler = 'app/api/route';
 
 // Send data using AJAX
 try {
@@ -249,9 +249,7 @@ try {
             <a href="https://www.instagram.com/edenrestorationng?igsh=MTUwY3Y1dGFjcGl6aA==" target="_blank" rel="noopener noreferrer">
               <FaInstagram className="text-white text-xl hover:text-pink-500" />
             </a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin className="text-white text-xl hover:text-blue-700" />
-            </a>
+              
           </div>
           <p>© 2024 EDEN. All rights reserved.</p>
         </div>

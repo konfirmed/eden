@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { CardContent, Card } from "@/components/ui/card"
-import { FaBars, FaTimes, FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaBars, FaTimes, FaFacebook, FaTwitter, FaInstagram,   } from 'react-icons/fa';
 import { ReactNode } from 'react';
 
 
@@ -85,7 +85,7 @@ export function Component() {
       <header
         className="bg-cover bg-center h-[600px] text-white"
         style={{
-          backgroundImage: "url('/hero image.png')",
+          backgroundImage: "url('/hero-image.jpg')",
         }}
       >
         <div className="container mx-auto px-6 py-24">
@@ -199,9 +199,7 @@ At EDEN Foundation, empowerment lies at the heart of our mission. Our Empowermen
 " target="_blank" rel="noopener noreferrer">
               <FaInstagram className="text-white text-xl hover:text-pink-500" />
             </a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin className="text-white text-xl hover:text-blue-700" />
-            </a>
+              
           </div>
           <p>© 2024 EDEN. All rights reserved.</p>
         </div>

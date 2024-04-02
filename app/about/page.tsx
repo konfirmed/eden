@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Image from 'next/image';
 import { Button } from "@/components/ui/button"; 
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaInstagram,   } from "react-icons/fa";
 import { Card, CardContent } from "@/components/ui/card"; 
 
 export default function About() {
@@ -34,7 +34,7 @@ export default function About() {
             </div>
           </div>
         </nav>
-        <section className="bg-[#f1f5f9] text-center py-16" style={{ backgroundImage: "url('/hero.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <section className="bg-[#f1f5f9] text-center py-16" style={{ backgroundImage: "url('/about us header.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <h1 className="text-4xl font-bold text-[#1e293b]">About Us</h1>
           <p className="text-[#64748b] mt-2">Helping / About us</p>
         </section>
@@ -99,9 +99,7 @@ export default function About() {
             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
               <FaInstagram className="text-white text-xl hover:text-pink-500" />
             </a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin className="text-white text-xl hover:text-blue-700" />
-            </a>
+              
           </div>
           <p>© 2024 EDEN. All rights reserved.</p>
         </div>
