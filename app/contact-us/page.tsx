@@ -1,10 +1,9 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { FaFacebook, FaTwitter, FaInstagram,   } from 'react-icons/fa';
 import Label from '@/components/ui/Label';
 import Input from '@/components/ui/Input';
 import Textarea from '@/components/ui/Textarea';
@@ -40,76 +39,36 @@ const ContactPage = () => {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    // Inside the handleSubmit function
-const handler = 'app/api/route';
-
-// Send data using AJAX
-try {
-  const response = await fetch(handler, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(formState)
-  });
-  if (!response.ok) {
-    throw new Error(`Network error: ${response.status}`);
-  }
-
-  const responseData = await response.json();
-  console.log('Response from server:', responseData); 
-} catch (error) {
-  console.error("Error submitting form:", error);
-}
-
-    // Reset errors before validation
-    setFormErrors({ name: '', email: '', subject: '', message: '' });
-
-    let hasErrors = false;
-
-    if (!formState.name) {
-      setFormErrors(prevErrors => ({ ...prevErrors, name: 'Please input your name' }));
-      hasErrors = true;
-    }
-
-    if (!formState.email) {
-      setFormErrors(prevErrors => ({ ...prevErrors, email: 'Please input your email' }));
-      hasErrors = true;
-    }
-
-    // Email Validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // A simple email regex
-    if (!emailRegex.test(formState.email)) {
-      setFormErrors(prevErrors => ({ ...prevErrors, email: 'Please enter a valid email address' }));
-      hasErrors = true;
-    }
-
-    if (!formState.subject) {
-      setFormErrors(prevErrors => ({ ...prevErrors, subject: 'Please input a subject' }));
-      hasErrors = true;
-    }
-
-    if (!formState.message) {
-      setFormErrors(prevErrors => ({ ...prevErrors, message: 'Please input your message' }));
-      hasErrors = true;
-    }
-
-    if (hasErrors) {
-      return; // Stop submission if there are errors
-    }
-
-    setIsLoading(true);
+    const handler = '/api/sendEmail';
 
     try {
+      const response = await fetch(handler, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formState)
+      });
+
+      if (!response.ok) {
+        throw new Error(`Network error: ${response.status}`);
+      }
+
+      const responseData = await response.json();
+      console.log('Response from server:', responseData);
+
       const docRef = await addDoc(collection(db, "messages"), formState);
       console.log("Document written with ID: ", docRef.id);
+
       setFormState({ name: '', email: '', subject: '', message: '' });
-      setSubmissionStatus('success');
-      clearSubmissionStatus();
-    } catch (error) {
-      console.error("Error adding document: ", error);
-      setSubmissionStatus('error');
-      clearSubmissionStatus();
-    } finally {
+      setFormErrors({ name: '', email: '', subject: '', message: '' });
       setIsLoading(false);
+      setSubmissionStatus('success');
+
+      clearSubmissionStatus();
+
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setIsLoading(false);
+      setSubmissionStatus('error');
     }
   };
 

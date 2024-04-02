@@ -8,17 +8,23 @@ interface FormData {
   message: string;
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' });
-    return;
-  }
-  
-  const formData: FormData = req.body;
+interface EmailResponse {
+  message?: string;
+  error?: string;
+}
+
+export async function OPTIONS(req: NextApiRequest, res: NextApiResponse) {
+  res.setHeader('Allow', 'POST');
+  res.status(200).end();
+}
+
+export async function POST(req: NextApiRequest, res: NextApiResponse<EmailResponse>) {
+  const formData: FormData = req.body; // Access the parsed form data directly
+
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: process.env.EMAIL_USERNAME, // Make sure these environment variables are set in your .env.local
+      user: process.env.EMAIL_USERNAME,
       pass: process.env.EMAIL_PASSWORD
     }
   });
