@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
 
-export async function OPTIONS(req, res) {
+export async function OPTIONS(_req, res) {
   res.setHeader('Allow', 'POST');
   res.status(200).end();
 }

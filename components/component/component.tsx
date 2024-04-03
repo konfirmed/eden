@@ -83,14 +83,17 @@ export function Component() {
       </div>
 
       <header
-  className="bg-cover bg-center h-[600px] text-white"
+  className="bg-cover bg-center h-[600px] text-white relative"
   style={{
     backgroundImage: "url('/hero-image.jpg')",
+    opacity: "0.8", // Adjust opacity value as needed
   }}
 >
-  <div className="container mx-auto px-6 py-24 flex flex-col items-center justify-center text-center">
-    <h1 className="text-5xl font-bold mb-4">We Help You</h1>
-    <h2 className="text-3xl font-bold mb-8">SAVE THE CHILDREN.</h2>
+  <div className="absolute inset-0 bg-black opacity-50"></div> {/* Overlay for opacity */}
+  <div className="container mx-auto px-6 py-32 flex flex-col items-center justify-center text-center relative z-10">
+    {/* Adjusted padding for vertical centering */}
+    <h1 className="text-5xl font-bold mb-4 mt-16">We Help You</h1> {/* Adjusted margin-top */}
+    <h2 className="text-3xl font-bold mb-8">SAVE THE CHILDREN.</h2> {/* Adjusted margin-bottom */}
     <p className="mb-8 text-lg font-bold">
       At EDEN, we are a dedicated foundation committed to making a positive
       impact in society.
@@ -102,6 +105,8 @@ export function Component() {
     </div>
   </div>
 </header>
+
+
 
 
       <section className="container mx-auto px-6 py-12">

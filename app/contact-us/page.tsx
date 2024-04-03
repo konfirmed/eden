@@ -44,17 +44,17 @@ const ContactPage = () => {
 
 
     try {
-      const response = await fetch(handler, {
+      const res = await fetch('/api/sendEmail', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formState)
       });
 
-      if (!response.ok) {
-        throw new Error(`Network error: ${response.status}`);
+      if (!res.ok) {
+        throw new Error(`Network error: ${res.status}`);
       }
 
-      const responseData = await response.json();
+      const responseData = await res.json();
       console.log('Response from server:', responseData);
 
       const docRef = await addDoc(collection(db, "messages"), formState);
