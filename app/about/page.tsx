@@ -3,29 +3,35 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Image from 'next/image';
 import { Button } from "@/components/ui/button"; 
-import { FaFacebook, FaTwitter, FaInstagram,   } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaInstagram, FaBars, FaTimes } from "react-icons/fa";
 import { Card, CardContent } from "@/components/ui/card"; 
 
 export default function About() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <>
       <div key="1" className="bg-white">
+        {/* Desktop Navigation */}
         <nav className="bg-white py-4 shadow-md sticky top-0 z-10">
           <div className="container mx-auto px-4 flex justify-between items-center">
-            <Image 
-              src="/eden new.png" 
-              alt="Eden Logo"  
-              height={100}
-              width={100}
-            />
-            <div className="flex items-center space-x-4">
-              <Link className="text-gray-600 hover:text-gray-800" href="/">
+            <div className="hidden md:flex items-center space-x-4 flex-grow">
+              <Link href="/" className="text-gray-600 hover:text-gray-800">
+                <Image src="/eden new.png" alt="Eden Logo" height={100} width={100} />
+              </Link>
+            </div>
+            <div className="hidden md:flex items-center space-x-4">
+              <Link href="/" className="text-gray-600 hover:text-gray-800">
                 Home
               </Link>
-              <Link className="text-gray-600 hover:text-gray-800" href="/about">
+              <Link href="/about" className="text-gray-600 hover:text-gray-800">
                 About Us
               </Link>
-              <Link className="text-gray-600 hover:text-gray-800" href="/gallery">
+              <Link href="/gallery" className="text-gray-600 hover:text-gray-800">
                 Gallery
               </Link>
               <Link href="/contact-us">
@@ -34,10 +40,46 @@ export default function About() {
             </div>
           </div>
         </nav>
+
+        {/* Mobile Navigation */}
+        <div className="md:hidden">
+          <nav className="bg-white py-4 shadow-md sticky top-0 z-10">
+            <div className="container mx-auto px-4 flex justify-between items-center">
+              <Link href="/" className="text-gray-600 hover:text-gray-800">
+                <Image src="/eden new.png" alt="Eden Logo" height={100} width={100} />
+              </Link>
+              <button onClick={toggleMenu} className="md:hidden text-3xl text-gray-600 focus:outline-none">
+                {isMenuOpen ? <FaTimes /> : <FaBars />}
+              </button>
+            </div>
+          </nav>
+          {/* Mobile Menu */}
+          {isMenuOpen && (
+            <div className="bg-white py-4 shadow-md">
+              <div className="container mx-auto px-4 flex flex-col items-center">
+                <Link href="/" className="text-gray-600 hover:text-gray-800">
+                  Home
+                </Link>
+                <Link href="/about" className="text-gray-600 hover:text-gray-800">
+                  About Us
+                </Link>
+                <Link href="/gallery" className="text-gray-600 hover:text-gray-800">
+                  Gallery
+                </Link>
+                <Link href="/contact-us">
+                  <Button className="bg-blue-500 hover:bg-blue-700 text-white">Contact Us</Button>
+                </Link>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Content Sections */}
         <section className="bg-[#f1f5f9] text-center py-16" style={{ backgroundImage: "url('/about us header.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <h1 className="text-4xl font-bold text-[#1e293b]">About Us</h1>
           <p className="text-[#64748b] mt-2">Helping / About us</p>
         </section>
+        {/* Remaining Content */}
         <section className="container mx-auto px-4 py-16">
           <div className="text-center space-y-4">
             <h2 className="text-3xl font-bold text-[#1e293b]"></h2>
@@ -87,6 +129,7 @@ export default function About() {
           </div>
         </section>
       </div>
+      {/* Footer Section */}
       <footer className="bg-[#1e293b] text-white py-8">
         <div className="container mx-auto px-4 text-center">
           <div className="flex justify-center items-center space-x-4 mb-4">
@@ -99,7 +142,6 @@ export default function About() {
             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
               <FaInstagram className="text-white text-xl hover:text-pink-500" />
             </a>
-              
           </div>
           <p>© 2024 EDEN. All rights reserved.</p>
         </div>
