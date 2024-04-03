@@ -1,25 +1,17 @@
 import nodemailer from 'nodemailer';
 import { NextApiRequest, NextApiResponse } from 'next';
 
-interface FormData {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-}
+// No need for FormData and EmailResponse interfaces in plain JavaScript
 
-interface EmailResponse {
-  message?: string;
-  error?: string;
-}
-
-export async function OPTIONS(req: NextApiRequest, res: NextApiResponse) {
+export async function OPTIONS(req, res) {
   res.setHeader('Allow', 'POST');
   res.status(200).end();
 }
 
-export async function POST(req: NextApiRequest, res: NextApiResponse<EmailResponse>) {
-  const formData: FormData = req.body; // Access the parsed form data directly
+export async function POST(req, res) {
+  console.log('Received form data:', req.body);
+
+  const formData = req.body; // Access the parsed form data directly
 
   const transporter = nodemailer.createTransport({
     service: 'gmail',

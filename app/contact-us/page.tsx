@@ -40,6 +40,8 @@ const ContactPage = () => {
     event.preventDefault();
 
     const handler = '/api/sendEmail';
+    console.log('Form data being sent:', formState); 
+
 
     try {
       const response = await fetch(handler, {
