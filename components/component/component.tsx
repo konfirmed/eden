@@ -151,10 +151,11 @@ At EDEN Foundation, our Enrichment program is designed to provide vital support 
           <p className="text-2xl font-bold mb-4">
             Development Program
           </p>
-          <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-            Empowering Communities Through Economic Independence
-            As part of our commitment to empowering communities, EDEN Foundations Development Program focuses on providing micro-enterprise funding to unemployed families. By offering financial assistance to start microbusinesses, we aim to create sustainable livelihoods and foster economic independence among our beneficiaries. Through this initiative, we seek to uplift individuals and families, enabling them to build a brighter future for themselves and their communities.
-          </p>
+          <p className="mb-4">
+  Empowering Communities Through Economic Independence
+  As part of our commitment to empowering communities, EDEN Foundations Development Program focuses on providing micro-enterprise funding to unemployed families. By offering financial assistance to start microbusinesses, we aim to create sustainable livelihoods and foster economic independence among our beneficiaries. Through this initiative, we seek to uplift individuals and families, enabling them to build a brighter future for themselves and their communities.
+</p>
+
         </div>
       </div>
     </div>

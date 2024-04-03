@@ -33,16 +33,16 @@ const ContactPage = () => {
   };
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormState({ ...formState, [event.target.id]: event.target.value });
+    const { id, value } = event.target;
+    setFormState({ ...formState, [id]: value });
   };
+  
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
-    const handler = '/api/sendEmail';
-    console.log('Form data being sent:', formState); 
-
-
+  
+    console.log('Form data being sent:', formState); // Add this line to log the form data
+  
     try {
       const res = await fetch('/api/sendEmail', {
         method: 'POST',
