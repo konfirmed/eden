@@ -54,9 +54,9 @@ export default function Gallery() {
             <Link className="text-gray-600 hover:text-gray-800" href="/gallery">
               Gallery
             </Link>
-            <Link href="/contact-us">
-              <Button className="bg-blue-500 hover:bg-blue-700 text-white">Contact Us</Button>
-            </Link>
+            <Link href="#">
+                <Button className="bg-blue-500 hover:bg-blue-700 text-white">Volunteer</Button>
+              </Link>
           </div>
         </div>
       </nav>
@@ -87,8 +87,8 @@ export default function Gallery() {
               <Link href="/gallery" className="text-gray-600 hover:text-gray-800">
                 Gallery
               </Link>
-              <Link href="/contact-us">
-                <Button className="bg-blue-500 hover:bg-blue-700 text-white">Contact Us</Button>
+              <Link href="#">
+                <Button className="bg-blue-500 hover:bg-blue-700 text-white">Volunteer</Button>
               </Link>
             </div>
           </div>
