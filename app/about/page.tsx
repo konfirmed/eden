@@ -40,7 +40,7 @@ export default function About() {
         </section>
         <section className="container mx-auto px-4 py-16">
           <div className="text-center space-y-4">
-            <h2 className="text-3xl font-bold text-[#1e293b]">About Us</h2>
+            <h2 className="text-3xl font-bold text-[#1e293b]"></h2>
             <p className="text-lg text-[#64748b]">
               EDEN Foundation is a non-governmental organization committed to enriching, developing, and empowering the needy in society. Our foundation was founded on the belief that everyone deserves access to basic necessities and the opportunity to thrive independently.
             </p>
