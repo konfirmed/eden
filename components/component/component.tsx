@@ -83,24 +83,25 @@ export function Component() {
       </div>
 
       <header
-        className="bg-cover bg-center h-[600px] text-white"
-        style={{
-          backgroundImage: "url('/hero-image.jpg')",
-        }}
-      >
-        <div className="container mx-auto px-6 py-24">
-          <h1 className="text-5xl font-bold mb-4">We Help You</h1>
-          <h2 className="text-3xl font-bold mb-8">SAVE THE CHILDREN.</h2>
-          <p className="mb-8 text-lg font-bold">
-           At EDEN, we are a dedicated foundation committed to making a positive impact in society.
-          </p>
-          <div className="flex space-x-4">
-          <Link href="/contact-us">
-       <Button className="bg-[#e27227c7] text-white">CONTACT EDEN</Button>
-       </Link>
-          </div>
-        </div>
-      </header>
+  className="bg-cover bg-center h-[600px] text-white"
+  style={{
+    backgroundImage: "url('/hero-image.jpg')",
+  }}
+>
+  <div className="container mx-auto px-6 py-24 text-center">
+    <h1 className="text-5xl font-bold mb-4">We Help You</h1>
+    <h2 className="text-3xl font-bold mb-8">SAVE THE CHILDREN.</h2>
+    <p className="mb-8 text-lg font-bold">
+      At EDEN, we are a dedicated foundation committed to making a positive
+      impact in society.
+    </p>
+    <div className="flex space-x-4">
+      <Link href="/contact-us">
+        <Button className="bg-[#e27227c7] text-white">CONTACT EDEN</Button>
+      </Link>
+    </div>
+  </div>
+</header>
 
       <section className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
