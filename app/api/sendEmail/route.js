@@ -39,6 +39,7 @@ export async function POST(req, res) {
 
     await transporter.sendMail(mailOptions);
     
+    console.log('Email sent successfully');
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.status(200).json({ message: 'Email sent successfully' });
   } catch (error) {
