@@ -1,13 +1,12 @@
-import nodemailer from 'nodemailer';
-import { NextApiRequest, NextApiResponse } from 'next';
+const nodemailer = require('nodemailer');
+const { NextApiRequest, NextApiResponse } = require('next');
 
-
-export async function OPTIONS(req: NextApiRequest, res: NextApiResponse) {
+async function OPTIONS(req, res) {
   res.setHeader('Allow', 'POST');
   res.status(200).end();
 }
 
-export async function POST(req: NextApiRequest, res: NextApiResponse) {
+async function POST(req, res) {
   console.log('Received form data:', req.body);
 
   const formData = req.body; // Access the parsed form data directly
@@ -39,3 +38,5 @@ export async function POST(req: NextApiRequest, res: NextApiResponse) {
     res.status(500).json({ error: 'Error sending email' });
   }
 }
+
+module.exports = { OPTIONS, POST };
