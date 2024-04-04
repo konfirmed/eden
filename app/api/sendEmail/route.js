@@ -1,5 +1,5 @@
 const nodemailer = require('nodemailer');
-const { NextApiRequest, NextApiResponse } = require('next');
+
 
 async function OPTIONS(req, res) {
   res.setHeader('Allow', 'POST');
