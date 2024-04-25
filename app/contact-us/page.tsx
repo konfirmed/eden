@@ -9,7 +9,7 @@ import Textarea from '@/components/ui/Textarea';
 import { FaBars, FaTimes, FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const ContactPage = () => {
-  const [formState, setFormState] = useState({
+  const [formData, setFormData] = useState({
     name: '',
     email: '',
     subject: '',
@@ -19,9 +19,13 @@ const ContactPage = () => {
   const [submissionStatus, setSubmissionStatus] = useState<null | 'success' | 'error'>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = event.target;
-    setFormState({ ...formState, [id]: value });
+    setFormData({ ...formData, [id]: value });
   };
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
@@ -30,17 +34,17 @@ const ContactPage = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('/api/route', {
+      const response = await fetch('/api/contact-us', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formState),
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
         setSubmissionStatus('success');
-        setFormState({ name: '', email: '', subject: '', message: '' });
+        setFormData({ name: '', email: '', subject: '', message: '' });
       } else {
         setSubmissionStatus('error');
       }
@@ -57,10 +61,6 @@ const ContactPage = () => {
     setTimeout(() => {
       setSubmissionStatus(null);
     }, 3000);
-  };
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
@@ -123,12 +123,13 @@ const ContactPage = () => {
         )}
       </div>
 
-      {/* Contact Form */}<div className="space-y-2 text-center">
-            <h1 className="text-3xl font-bold">Contact Us</h1>
-            <p className="text-gray-500 dark:text-gray-400">
-              Get in touch with us to learn more about our initiatives and how you can contribute.
-            </p>
-          </div>
+      {/* Contact Form */}
+      <div className="space-y-2 text-center">
+        <h1 className="text-3xl font-bold">Contact Us</h1>
+        <p className="text-gray-500 dark:text-gray-400">
+          Get in touch with us to learn more about our initiatives and how you can contribute.
+        </p>
+      </div>
 
       <div className="flex flex-col flex-grow justify-center">
         <form className="w-full max-w-md mx-auto space-y-6" onSubmit={handleSubmit}>
@@ -136,16 +137,16 @@ const ContactPage = () => {
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
                 <Label htmlFor="name">Name</Label>
-                <Input id="name" placeholder="Your Name" value={formState.name} onChange={handleChange} />
+                <Input id="name" placeholder="Your Name" value={formData.name} onChange={handleChange} />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="email">Email</Label>
-                <Input id="email" placeholder="Your Email" type="email" value={formState.email} onChange={handleChange} />
+                <Input id="email" placeholder="Your Email" type="email" value={formData.email} onChange={handleChange} />
               </div>
             </div>
             <div className="space-y-2">
               <Label htmlFor="subject">Subject</Label>
-              <Input id="subject" placeholder="Subject" value={formState.subject} onChange={handleChange} />
+              <Input id="subject" placeholder="Subject" value={formData.subject} onChange={handleChange} />
             </div>
             <div className="space-y-2">
               <Label htmlFor="message">Message</Label>
@@ -153,7 +154,7 @@ const ContactPage = () => {
                 className="min-h-[100px] border-2 border-blue-500 rounded-lg p-2"
                 id="message"
                 placeholder="Your Message"
-                value={formState.message}
+                value={formData.message}
                 onChange={handleChange}
               />
             </div>
@@ -200,4 +201,3 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
-
