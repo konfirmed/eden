@@ -21,8 +21,11 @@ export async function POST(request) {
                     padding: 20px;
                     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
                 }
-                .email-content {
-                    margin-bottom: 20px;
+                .email-title {
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: #333;
+                    margin-bottom: 10px;
                 }
                 .email-field {
                     font-weight: bold;
@@ -31,6 +34,7 @@ export async function POST(request) {
                 }
                 .email-value {
                     color: #666;
+                    margin-bottom: 15px;
                 }
                 .email-button {
                     background-color: #007bff;
@@ -50,21 +54,21 @@ export async function POST(request) {
         </head>
         <body>
             <div class="email-wrapper">
-                <h2>Contact Form Inquiry</h2>
-                <div class="email-content">
-                    <p class="email-field">Name:</p>
+                <h2 class="email-title">Contact Form Inquiry</h2>
+                <div class="email-field">
+                    <p class="email-title">Name:</p>
                     <p class="email-value">${data.name}</p>
                 </div>
-                <div class="email-content">
-                    <p class="email-field">Email:</p>
+                <div class="email-field">
+                    <p class="email-title">Email:</p>
                     <p class="email-value">${data.email}</p>
                 </div>
-                <div class="email-content">
-                    <p class="email-field">Subject:</p>
+                <div class="email-field">
+                    <p class="email-title">Subject:</p>
                     <p class="email-value">${data.subject}</p>
                 </div>
-                <div class="email-content">
-                    <p class="email-field">Message:</p>
+                <div class="email-field">
+                    <p class="email-title">Message:</p>
                     <p class="email-value">${data.message}</p>
                 </div>
                 <a href="#" class="email-button">Reply to ${data.name}</a>
