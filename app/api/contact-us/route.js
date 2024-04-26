@@ -11,32 +11,63 @@ export async function POST(request) {
             <style>
                 /* Add your CSS styles here */
                 body {
-                    font-family: Arial, sans-serif;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    background-color: #f7f7f7;
+                    padding: 20px;
+                }
+                .email-wrapper {
+                    background-color: #fff;
+                    border-radius: 10px;
+                    padding: 20px;
+                    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
                 }
                 .email-content {
                     margin-bottom: 20px;
                 }
                 .email-field {
                     font-weight: bold;
+                    color: #333;
+                    margin-bottom: 5px;
+                }
+                .email-value {
+                    color: #666;
+                }
+                .email-button {
+                    background-color: #007bff;
+                    color: #fff;
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-size: 16px;
+                    text-decoration: none;
+                    display: inline-block;
+                }
+                .email-button:hover {
+                    background-color: #0056b3;
                 }
             </style>
         </head>
         <body>
-            <div class="email-content">
-                <p class="email-field">Name:</p>
-                <p>${data.name}</p>
-            </div>
-            <div class="email-content">
-                <p class="email-field">Email:</p>
-                <p>${data.email}</p>
-            </div>
-            <div class="email-content">
-                <p class="email-field">Subject:</p>
-                <p>${data.subject}</p>
-            </div>
-            <div class="email-content">
-                <p class="email-field">Message:</p>
-                <p>${data.message}</p>
+            <div class="email-wrapper">
+                <h2>Contact Form Inquiry</h2>
+                <div class="email-content">
+                    <p class="email-field">Name:</p>
+                    <p class="email-value">${data.name}</p>
+                </div>
+                <div class="email-content">
+                    <p class="email-field">Email:</p>
+                    <p class="email-value">${data.email}</p>
+                </div>
+                <div class="email-content">
+                    <p class="email-field">Subject:</p>
+                    <p class="email-value">${data.subject}</p>
+                </div>
+                <div class="email-content">
+                    <p class="email-field">Message:</p>
+                    <p class="email-value">${data.message}</p>
+                </div>
+                <a href="#" class="email-button">Reply to ${data.name}</a>
             </div>
         </body>
         </html>
